@@ -1,0 +1,55 @@
+<html>
+    <head>
+	<style>
+	 button {
+	     width: 80%;
+	     height: 25%;
+	     font-size: 5em;
+	     margin: 5%;
+	     align: center;
+	     border: 5px solid black;
+	     color: black;
+	 }
+	 .true {
+	     background-color: green;
+	 }
+	 .false {
+	     background-color: red;
+	 }
+	 .clear {
+	     height: 10%;
+	     font-size: 2em;
+	 }
+	 div {
+	     margin-top: 10%;
+	     text-align: center;
+	 }
+	</style>
+    </head>
+    <body>
+	<div>
+	    <button class="true" onclick="javascript: change_background_color('green');">
+		True
+	    </button>
+	    <button class="false" onclick="javascript: change_background_color('red');">
+		False
+	    </button>
+	    <button class="clear" onclick="javascript: change_background_color('white');">
+		Clear
+	    </button>
+	</div>
+	<script>
+	 click_url = 'http://www.sdltd.com/assets/audio/noise_cancellation_tutorials/events/LOCK.wav';
+	 var click = new Audio(click_url);
+	 click.oncanplaythrough = function(){
+	     click.play();
+	 }
+	 click.loop = false;
+	 
+	 function change_background_color(color) {
+	     document.body.style.background = color;
+	     click.play();
+	 };
+	</script>
+    </body>
+</html>
